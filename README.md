@@ -34,3 +34,14 @@ If you see a `404 File not found` for `/index.html`, the server was started from
 3. Start it again with `python3 -m http.server 8000`.
 
 A `404` for `/favicon.ico` is harmless unless you add a favicon file.
+
+
+## Deploy to the internet
+
+For a full deployment walkthrough, see [`DEPLOYMENT.md`](DEPLOYMENT.md).
+
+Quick path (GitHub Pages):
+
+1. Push this repository to GitHub.
+2. In **Settings → Pages**, choose **GitHub Actions** as the source.
+3. The included workflow at `.github/workflows/deploy-pages.yml` will publish the site on every push to `main`.
