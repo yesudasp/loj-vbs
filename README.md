@@ -1,19 +1,23 @@
 # loj-vbs
 
-Static website for LOJ Vacation Bible School.
+VBS website for Love of Jesus Church.
 
-## Local preview
+## Pages
+
+- `index.html`: public student self-registration form.
+- `admin.html`: admin-only view of registrations (passcode protected in the browser).
+
+## How it works
+
+- Registrations are stored in browser `localStorage` under `lojVbsRegistrations`.
+- Admin passcode is set in `admin.js` as `LOJ-VBS-ADMIN`.
+
+## Run locally
 
 ```bash
-python3 -m http.server 4173
+python3 -m http.server 8000
 ```
 
-Then open `http://localhost:4173`.
-
-## Deploy target
-
-This repository is prepared for GitHub Pages with a custom domain.
-
-- `CNAME` is set to `www.lojvbs.com`.
-- Push this branch and enable **Settings → Pages → Deploy from branch**.
-- Point your DNS `CNAME` record for `www` to `<your-github-username>.github.io`.
+Then open:
+- `http://localhost:8000/index.html`
+- `http://localhost:8000/admin.html`

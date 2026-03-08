@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOJ VBS Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero admin-hero">
+      <div class="container">
+        <h1>LOJ VBS Admin Dashboard</h1>
+        <p>View and manage student registrations.</p>
+        <a class="admin-link" href="index.html">Back to Registration</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="admin-login" class="card narrow">
+        <h2>Admin Sign In</h2>
+        <p class="help-text">Enter the admin passcode to view registrations.</p>
+        <form id="login-form">
+          <label>
+            Admin Passcode
+            <input type="password" id="admin-passcode" required />
+          </label>
+          <button type="submit">Sign In</button>
+          <p id="login-message" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="admin-panel" class="card" hidden>
+        <div class="panel-header">
+          <h2>Registered Students</h2>
+          <div class="button-group">
+            <button id="download-csv" type="button">Download CSV</button>
+            <button id="clear-registrations" type="button" class="danger">Clear All</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Student Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Guardian</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Emergency Contact</th>
+                <th>Medical Notes</th>
+              </tr>
+            </thead>
+            <tbody id="registration-table-body"></tbody>
+          </table>
+        </div>
+        <p id="admin-message" class="message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
